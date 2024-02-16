@@ -3,9 +3,7 @@ import pandas as pd
 from backend.utils import extract_movie_id
 
 
-def movie_recommender_engine(movie_name, matrix, cf_model, n_recs, movie_to_idx, cf_knn_model, movie_metadata):
-    # Fit model on matrix
-    cf_knn_model.fit(matrix)
+def movie_recommender_engine(movie_name, matrix, cf_model, n_recs, movie_to_idx, movie_metadata):
 
     # Extract input movie ID
     movie_id = extract_movie_id(movie_name, movie_metadata)
