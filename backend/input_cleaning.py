@@ -5,7 +5,7 @@ from scipy.sparse import csr_matrix
 def get_input_and_clean():
 
     chunk_size = 10000
-    # we are using the small version of the dataset because the original dataset is too large to fit in memory <- this needs to be fixed FAISAL
+    # we are using the small version of the dataset because the original dataset is too large to fit in memory <- this needs to be fixed faisal
     chunks = pd.read_csv('../input/ratings_small.csv', chunksize=chunk_size)
     user_ratings_df = pd.concat(list(chunks), ignore_index=True)
     user_ratings_df.head()
